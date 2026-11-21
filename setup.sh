@@ -1,8 +1,6 @@
 
 set -o errexit -o pipefail
 
-git submodule update --init --recursive
-
 usage() {
   cat <<'EOF'
 Usage: setup.sh [options]
@@ -61,6 +59,8 @@ do_setup() {
   local __script_dir="$( cd -- "$( dirname -- "$0" )" &> /dev/null && pwd )"
   local __setup_dirs=()
   local __setup_dir_path
+
+  git -C "$__script_dir" submodule update --init --recursive
 
   for __setup_dir_path in "${ORDERED_SETUP_DIRS[@]}"; do
     local __dir_name="$( basename "$__setup_dir_path" )"
