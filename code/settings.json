@@ -28,14 +28,10 @@
     "terminal.integrated.copyOnSelection": true,
     "html.format.indentInnerHtml": true,
     "merge-conflict.autoNavigateNextConflict.enabled": true,
-    "python.analysis.completeFunctionParens": true,
     "files.autoGuessEncoding": true,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "debug.onTaskErrors": "showErrors",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
     "files.associations": {
         "*.ejs": "html"
     },
@@ -58,16 +54,9 @@
     "workbench.editor.enablePreviewFromCodeNavigation": true,
     "workbench.editor.enablePreviewFromQuickOpen": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "jupyter.askForKernelRestart": false,
     "editor.minimap.renderCharacters": false,
     "terminal.integrated.persistentSessionScrollback": 10000,
     "editor.stickyScroll.enabled": true,
-    "jupyter.widgetScriptSources": [
-        "jsdelivr.com",
-        "unpkg.com"
-    ],
-    "jupyter.interactiveWindow.textEditor.executeSelection": true,
-    "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
     "markdown.occurrencesHighlight.enabled": true,
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
@@ -99,10 +88,6 @@
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.excludeDirty": true,
     "workbench.editor.limit.perEditorGroup": true,
-    "jupyter.enableExtendedPythonKernelCompletions": true,
-    "python.analysis.autoFormatStrings": true,
-    "python.analysis.cacheLSPData": true,
-    "python.analysis.supportDocstringTemplate": true,
     "search.quickAccess.preserveInput": true,
     "search.searchEditor.focusResultsOnSearch": true,
     "debug.showSubSessionsInToolBar": true,
@@ -114,9 +99,6 @@
     "terminal.integrated.stickyScroll.enabled": true,
     "editor.inlineSuggest.syntaxHighlightingEnabled": true,
     "editor.stickyTabStops": true,
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.logLevel": "Warning",
-    "python.analysis.inlayHints.functionReturnTypes": true,
     "workbench.fontAliasing": "antialiased",
     "explorer.incrementalNaming": "smart",
     "search.defaultViewMode": "tree",
@@ -125,8 +107,7 @@
     "chat.agent.enabled": true,
     "mediaPreview.video.autoPlay": true,
     "mediaPreview.video.loop": true,
-    "jupyter.showVariableViewWhenDebugging": true,
-    "markdown.updateLinksOnFileMove.enabled": "prompt",
+    "markdown.updateLinksOnFileMove.enabled": "never",
     "settingsSync.ignoredSettings": [
         "-python.locator"
     ],
@@ -139,10 +120,6 @@
     "workbench.remoteIndicator.showExtensionRecommendations": false,
     "markdown.preview.breaks": true,
     "markdown.preview.scrollEditorWithPreview": false,
-    "jupyter.interactiveWindow.textEditor.normalizeSelection": true,
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "interactiveWindow.executeWithShiftEnter": true,
-    "inlineChat.enableV2": true,
     "notebook.inlineValues": "auto",
     "editor.selectionHighlightMultiline": true,
     "editor.wrappingStrategy": "advanced",
@@ -165,9 +142,10 @@
     "chat.math.enabled": true,
     "github.copilot.enable": {
         "*": true,
-        "plaintext": false,
+        "plaintext": true,
         "markdown": true,
-        "scminput": false
+        "scminput": false,
+        "shellscript": true
     },
     "git.confirmSync": false,
     "terminal.integrated.allowChords": false,
@@ -176,7 +154,6 @@
     "editor.experimental.preferTreeSitter.regex": true,
     "editor.inertialScroll": true,
     "editor.unfoldOnClickAfterEndOfLine": true,
-    "editor.formatOnSave": true,
     "workbench.panel.showLabels": false,
     "workbench.editor.limit.value": 9,
     "window.density.editorTabHeight": "compact",
@@ -189,7 +166,6 @@
     "notebook.experimental.remoteSave": true,
     "notebook.lineNumbers": "on",
     "notebook.variablesView": true,
-    "chat.edits2.enabled": true,
     "http.proxySupport": "fallback",
     "http.experimental.systemCertificatesV2": true,
     "git.autofetch": true,
@@ -203,5 +179,29 @@
     "git.enableSmartCommit": true,
     "workbench.editor.tabActionCloseVisibility": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "explorer.fileNesting.enabled": true
+    "explorer.fileNesting.enabled": true,
+    "chat.editing.confirmEditRequestRetry": false,
+    "chat.plugins.marketplaces": [
+        "github/copilot-plugins",
+        "github/awesome-copilot",
+        "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    ],
+    "chat.editing.confirmEditRequestRemoval": false,
+    "chat.tools.urls.autoApprove": {
+        "https://code.visualstudio.com": true,
+        "https://github.com/microsoft/vscode/wiki/*": true,
+        "https://docs.rs": true,
+        "https://www.w3.org": {
+            "approveRequest": false,
+            "approveResponse": true
+        }
+    },
+    "github.copilot.nextEditSuggestions.eagerness": "auto",
+    "diffEditor.maxComputationTime": 0,
+    "chat.agent.maxRequests": 100,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "terminal.integrated.initialHint": false,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "workbench.experimental.modernUI": true
 }
