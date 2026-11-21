@@ -4,9 +4,6 @@
 [submodule "stow/common/nvim/.config/nvim/pack/plugins/start/mini.pick"]
 	path = stow/common/nvim/.config/nvim/pack/plugins/start/mini.pick
 	url = https://github.com/nvim-mini/mini.pick
-[submodule "stow/common/nvim/.config/nvim/pack/github/start/copilot.vim"]
-	path = stow/common/nvim/.config/nvim/pack/github/start/copilot.vim
-	url = https://github.com/github/copilot.vim
 [submodule "stow/common/nvim/.config/nvim/pack/nvim/start/nvim-lspconfig"]
 	path = stow/common/nvim/.config/nvim/pack/nvim/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
