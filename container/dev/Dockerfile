@@ -38,11 +38,11 @@ RUN apt-get install -y coreutils findutils diffutils file git git-lfs gnupg unzi
     apt-get clean
 
 # install compilers and debuggers, build tools
-RUN apt-get install -y build-essential pkg-config autoconf llvm clang lld lldb gcc gdb clang-format musl-tools strace valgrind make cmake ninja-build nodejs npm flatbuffers-compiler protobuf-compiler && \
+RUN apt-get install -y build-essential pkg-config autoconf llvm clang clangd lld lldb gcc gdb clang-format musl-tools strace valgrind make cmake ninja-build nodejs npm flatbuffers-compiler protobuf-compiler shellcheck tree-sitter-cli && \
     apt-get clean
 
 # install monitoring tools
-RUN apt-get install -y htop iftop && \
+RUN apt-get install -y htop iftop psmisc lsof socat && \
     apt-get clean
 
 # install editors
@@ -50,7 +50,8 @@ RUN apt-get install -y neovim nano binwalk && \
     apt-get clean
 
 # install commonly used packages
-RUN apt-get install -y man tmux stow jq tree python3-dev ffmpeg gh && \
+RUN apt-get install -y man tmux stow jq tree python3-dev ffmpeg gh ripgrep fd-find xxd && \
+    ln -s "$(command -v fdfind)" /usr/local/bin/fd && \
     apt-get clean
 
 # setup rustup
