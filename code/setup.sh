@@ -15,4 +15,10 @@ case "$( uname -s )" in
     ;;
 esac
 
+while IFS= read -r __ext || [[ -n "$__ext" ]]; do
+  [[ -z "$__ext" || "$__ext" == \#* ]] && continue
+  code --install-extension "$__ext"
+done < "$SCRIPT_DIR/extensions.txt"
+unset __ext
+
 unset SCRIPT_DIR
